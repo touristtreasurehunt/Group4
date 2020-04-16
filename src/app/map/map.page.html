@@ -1,0 +1,34 @@
+<app-header title="Map"></app-header>
+
+<ion-content>
+  <ion-item style="cursor: pointer" (click)="locatePosition()">
+    <ion-button>
+      <ion-icon slot="start" name="map"></ion-icon>
+      Locate Position
+    </ion-button>
+  </ion-item>
+
+  <div id="map"></div>
+
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col><ion-button (click)="moveTo(28.101199, -15.414342)">Néstor Álamo</ion-button></ion-col>
+      <ion-col><ion-button (click)="moveTo(28.100854, -15.414735)">Cathedral</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button (click)="moveTo(28.101589, -15.414095)">Colón</ion-button></ion-col>
+      <ion-col><ion-button (click)="moveTo(28.107110, -15.421675)">Mata's Castle</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button (click)="moveTo(28.105579, -15.418487)">Palacete</ion-button></ion-col>
+      <ion-col><ion-button (click)="moveTo(28.107810, -15.417135)">Triana</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button (click)="moveTo(28.130113, -15.448654)">Auditorium</ion-button></ion-col>
+      <ion-col><ion-button (click)="moveTo(28.128391, -15.447452)">Las Arenas</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button (click)="moveTo(28.131788, -15.444534)">Las Canteras</ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,21 @@
+<app-header title="Information"></app-header>
+
+<ion-content>
+    <img src="../../assets/images/{{place.photo}}" />
+
+    <ion-buttons>
+        <ion-button routerLink="/map">See in map</ion-button>
+        <ion-button routerLink="/quiz">Quiz</ion-button>
+    </ion-buttons>
+
+    <ion-card>
+        <ion-card-header routerLink="/information">
+            <ion-card-title>{{place.name}}</ion-card-title>
+            <ion-card-subtitle>Vegueta</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+            <p>{{place.info}}</p>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

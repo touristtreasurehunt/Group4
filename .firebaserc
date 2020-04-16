@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "thegreathunt-23ec5"
+  },
+  "targets": {
+    "thegreathunt-23ec5": {
+      "hosting": {
+        "app": [
+          "thegreathunt-23ec5"
+        ]
+      }
+    }
+  }
+}

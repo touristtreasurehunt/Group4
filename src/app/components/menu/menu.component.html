@@ -1,0 +1,47 @@
+<ion-menu side="start" menuId="menu" contentId="main-menu">
+  <!-- Menu header -->
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title> {{ navigationName }} </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- Menu content -->
+  <ion-content>
+    <ion-list *ngFor="let page of pages">
+      <ion-menu-toggle >
+        <ion-item (click)="Goto(page)">
+          <ion-label>{{ page.pagename }}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      
+      <!-- <ion-menu-toggle>
+        <ion-item routerLink="/">
+          <ion-icon slot="start" name="home"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="/map">
+          <ion-icon slot="start" name="home"></ion-icon>
+          <ion-label>Map</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="/frontpage">
+          <ion-icon slot="start" name="home"></ion-icon>
+          <ion-label>Language</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="/about">
+          <ion-icon slot="start" name="home"></ion-icon>
+          <ion-label>About Us</ion-label>
+        </ion-item>
+      </ion-menu-toggle> -->
+
+    </ion-list>
+  </ion-content>
+</ion-menu>

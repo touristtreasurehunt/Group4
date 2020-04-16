@@ -1,0 +1,62 @@
+<app-header title="Quiz"></app-header>
+
+<ion-content>
+  <ion-img src="../../assets/images/{{place.photo}}"></ion-img>
+
+  <!-- Slider -->
+  <ion-slides #mySlider >
+    <!-- Question 1 -->
+    <ion-slide class=“swiper-no-swiping”>
+      <div class="ion-padding">
+        <h3>{{question[0].question}}</h3>
+      </div>
+      <div>
+        <ion-list>
+          <ion-item *ngFor = "let check of question[0].answers" (click) ="onClick(check)">
+            <ion-label >{{check.answer}}</ion-label>
+            <ion-checkbox slot="start" [color]= "check.color" [value]= "check.value" [checked] = "check.checked" [disabled] = "check.disabled"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-slide>
+
+    <!-- Question 2 -->
+    <ion-slide>
+      <div class="ion-padding">
+        <h3>{{question[1].question}}</h3>
+      </div>
+      <div>
+        <ion-list>
+          <ion-item *ngFor = "let check of question[1].answers" (click) ="onTap(check)">
+            <ion-label >{{check.answer}}</ion-label>
+            <ion-checkbox slot="start" [color]= "check.color" [value]= "check.value" [checked] = "check.checked" [disabled] = "check.disabled"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-slide>
+
+    <!-- Question 3 -->
+    <ion-slide>
+      <div class="ion-padding">
+        <h3>{{question[2].question}}</h3>
+      </div>
+      <div>
+        <ion-list>
+          <ion-item *ngFor = "let check of question[2].answers" (click) ="onPush(check)">
+            <ion-label >{{check.answer}}</ion-label>
+            <ion-checkbox slot="start" [color]= "check.color" [value]= "check.value" [checked] = "check.checked" [disabled] = "check.disabled"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-slide>
+    
+    <!-- Score -->
+    <ion-slide>
+      <div class="ion-padding">
+        <h3 [innerText]="content"></h3>
+        <ion-button (click)="Return()" [innerText]="contenido"></ion-button>
+        <!-- <ion-button [innerText]="contenido"></ion-button> -->
+      </div>
+    </ion-slide>
+</ion-slides>
+</ion-content>

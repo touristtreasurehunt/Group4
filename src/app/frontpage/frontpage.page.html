@@ -1,0 +1,22 @@
+<!--
+  <ion-header>
+  <ion-toolbar>
+    <ion-title>frontpage</ion-title>
+  </ion-toolbar>
+</ion-header>
+-->
+
+<ion-content [fullscreen]="true" class="background-image">
+  <div id="custom-vertical-center">
+    <div class="app-title">
+      <h2> The Great Hunt </h2>
+    </div>
+    <ion-img src="/assets/images/map01.svg"></ion-img>
+    <div id="frontpage-language-flags">
+      <div></div>
+      <ion-img src="/assets/images/spain-flag.svg" (click)="beginGameSpanish()"></ion-img>
+      <ion-img src="/assets/images/uk-flag.png" (click)="beginGameEnglish()"></ion-img>
+      <div></div>
+    </div>
+  </div>
+</ion-content>

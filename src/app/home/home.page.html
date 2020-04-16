@@ -1,20 +1,38 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-menu-button color="primary" menu="menu"></ion-menu-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Home </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div *ngFor="let zone of zones; let i = index">
+    <ion-card *ngFor="let place of zone.places; let j = index">
+      <ion-card-header (click)="goTo(i, j)">
+        <img src="../../assets/images/{{place.photo}}">
+        <ion-card-title>{{place.name}}</ion-card-title>
+        <ion-card-subtitle>{{zone.zone}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
   </div>
+
+  <!-- <ion-card *ngFor="let zone of zones; let i = index">
+      <img src="../../assets/images/{{zone.places[i].photo}}" />
+      <ion-card-header  routerLink="/vegueta11">
+        <ion-card-title>{{zone.places[i].name}}</ion-card-title>
+        <ion-card-subtitle>{{zone.zone}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Statue in honor of Néstor Álamo...
+      </ion-card-content>
+    </ion-card> -->
+
+
+
 </ion-content>

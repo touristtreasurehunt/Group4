@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "american-football",
+        "name": "Home",
+        "redirectTo": "/home"
+    },
+    {
+        "icon": "american-football",
+        "name": "Map",
+        "redirectTo": "/map"
+    },
+    {
+        "icon": "american-football",
+        "name": "Language",
+        "redirectTo": "/language"
+    },
+    {
+        "icon": "american-football",
+        "name": "About Us",
+        "redirectTo": "/about"
+    }
+]
